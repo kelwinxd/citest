@@ -1,0 +1,16 @@
+name: Teste CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v3
+
+    - name: Rodar script
+      run: node index.js
